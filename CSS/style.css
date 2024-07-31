@@ -1,4 +1,4 @@
-/* CSS Reset and General Styles */
+/* General Styles */
 body {
   margin: 0;
   padding: 0;
@@ -6,38 +6,43 @@ body {
   font-size: 18px;
   font-weight: 600;
   background-image: url('Sources/yellowbasket.jpeg');
-  background-size: cover; /* Change to cover for responsive background */
+  background-size: cover; /* Use cover for responsive background */
   background-repeat: no-repeat;
   background-position: center;
 }
 
 h1 {
-  font-size: 4em; /* Responsive size */
+  font-size: 68px; /* Large font size for desktop */
   text-align: center;
   margin: 0;
   padding: 0.5em 0;
 }
 
 .header {
-  padding: 1em;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  padding-bottom: 10px;
 }
 
 .input-section {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
   padding: 1em;
 }
 
 .input-section input[type="text"] {
-  width: 90%; /* Adjust width to fit smaller screens */
-  max-width: 400px;
+  width: 400px; /* Fixed width for desktop */
   padding: 10px;
   border: 0.25px solid black;
-  border-radius: 50px; /* Make border radius more rounded */
+  border-radius: 1000px;
   font-size: 16px;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 70px;
 }
 
 .input-section button[type="submit"] {
@@ -45,49 +50,30 @@ h1 {
   color: white;
   cursor: pointer;
   border: 0.25px solid black;
-  border-radius: 50px;
+  border-radius: 1000px;
   padding: 10px 20px;
   font-size: 16px;
 }
 
-/* Responsive Text Box */
-.text-box {
-  display: inline-block;
-  background-color: none;
-  border: 0.25px solid black;
-  padding: 1em;
-  margin: 0.5em;
-  border-radius: 50%;
-  word-wrap: break-word;
-  max-width: 90%;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-/* Footer Style */
-.footer {
-  text-align: center;
-  padding: 1em;
-  font-size: 1em;
-  position: relative; /* Changed to relative */
-}
-
-/* Media Queries for Mobile Devices */
+/* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
   h1 {
-    font-size: 3em; /* Adjust font size for smaller screens */
+    font-size: 48px; /* Adjusted size for mobile */
   }
 
   .header {
-    padding: 0.5em;
+    margin: 20px; /* Adjust margin for smaller screens */
   }
 
   .input-section {
-    padding: 0.5em;
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px; /* Adjust padding for smaller screens */
   }
 
   .input-section input[type="text"] {
-    width: 95%; /* Adjust input width for smaller screens */
+    width: 90%; /* Responsive width */
+    max-width: none; /* Remove max-width constraint */
+    margin-bottom: 20px; /* Adjust bottom margin */
   }
 
   .input-section button[type="submit"] {
@@ -96,11 +82,41 @@ h1 {
   }
 
   .text-box {
-    padding: 0.5em;
-    font-size: 14px;
+    padding: 1em;
+    font-size: 14px; /* Adjust font size for text-boxes */
+    width: 90%; /* Responsive width */
+    max-width: none; /* Remove max-width constraint */
   }
 
   .footer {
-    font-size: 0.9em; /* Adjust font size for smaller screens */
+    font-size: 14px; /* Adjust footer font size */
+    text-align: center; /* Center text on smaller screens */
+    padding: 10px; /* Adjust padding */
+  }
+}
+
+/* Additional Media Queries for Very Small Devices (e.g., Phones) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 36px; /* Further reduce font size for very small screens */
+  }
+
+  .input-section input[type="text"] {
+    font-size: 14px; /* Smaller font size for input on small screens */
+  }
+
+  .input-section button[type="submit"] {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .text-box {
+    padding: 0.5em;
+    font-size: 12px;
+  }
+
+  .footer {
+    font-size: 12px; /* Further adjust footer font size */
+    padding: 5px; /* Reduce padding */
   }
 }
