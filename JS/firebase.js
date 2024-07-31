@@ -1,11 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
-import {
-  getDatabase,
-  ref,
-  child,
-  set,
-  get,
-} from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js";
+import { getDatabase, ref, child, set, get } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyADzuQM5Gvfr2LN9IRd_K2jXzHJsFCnopw",
@@ -20,7 +15,7 @@ const firebaseConfig = {
 
   // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getDatabase();
+const db = getDatabase(app);
 
 
 $(document).ready(function(){
