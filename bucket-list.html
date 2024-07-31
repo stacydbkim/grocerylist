@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+		<a href="./bucket-list.html"><title>collective bucket list</title></a>
+	<link rel="stylesheet" href="./CSS/bucket-list-style.css">
+	<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		<h1 class="title">Grocery List</h1>
+	</div>
+	<div class="input-section">
+		<input type="text" id="input" placeholder="*I need to grab...*">
+		<div id="image-container"></div>
+		<button type="submit" onclick="addText()" >Add</button>
+	</div>
+	<div class="output-section">
+		<div id="output"></div>
+	</div>
+
+
+	<div class="output-container">
+		
+	</div>
+	<div class="footer">
+	<p>*add your grocery items. click to delete.</p></div>
+
+	<script src="./JS/bucket-list.js"></script>
+	 <script type="module" src="./JS/firebase.js"></script>	
+</body>
+</html>
+
