@@ -65,17 +65,16 @@ function showData() {
 
 function updateAnswer(d) {
   var data = {
-    name:d,
-    progress:false,
-  }
-  console.log(d)
-  set(ref(db, `/bucket/${answerLength}`),data)
+    name: d,
+    progress: false,
+  };
+  console.log(d);
+  set(ref(db, `bucket/${answerLength}`), data)
     .then(() => {
-      alert("답변 등록 완료");
-      
+      alert("Answer submitted successfully.");
     })
     .catch((error) => {
-      alert("nono");
+      alert("Error submitting answer.");
     });
 }
 
