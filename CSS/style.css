@@ -1,122 +1,149 @@
-/* General Styles */
+/* CSS for the input section */
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Syne", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  background-image: url('Sources/yellowbasket.jpeg');
-  background-size: cover; /* Use cover for responsive background */
+	margin: 30px 30px 30px 30px;
+	padding: 0;
+	font-family: "Syne", sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	font-style: normal;
+	background-image: url('Sources/yellowbasket.jpeg');
+  background-size: 58%;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
+  margin-top: 100px;
 }
 
+
 h1 {
-  font-size: 68px; /* Large font size for desktop */
+  font-family: "Syne", sans-serif;
+  color: black;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 68px;
   text-align: center;
-  margin: 0;
-  padding: 0.5em 0;
+  line-height: 1;
 }
 
 .header {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 50px;
-  padding-bottom: 10px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 50px;
+	padding-bottom: 10px;
 }
 
 .input-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-  padding: 1em;
+    display: flex;
+    justify-content: center; /* Horizontally center the items */
+    align-items: center; /* Vertically center the items */
 }
 
 .input-section input[type="text"] {
-  width: 400px; /* Fixed width for desktop */
-  padding: 10px;
-  border: 0.25px solid black;
-  border-radius: 1000px;
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 70px;
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Adjust padding as needed */
+    font-size: 16px;
+    border: 0.25px solid black;
+    border-radius: 1000px;
+    text-align: center;
+    width: 400px;
+    margin-bottom: 70px;
+    margin-top: 0px;
 }
 
 .input-section button[type="submit"] {
-  background: black;
-  color: white;
-  cursor: pointer;
-  border: 0.25px solid black;
-  border-radius: 1000px;
-  padding: 10px 20px;
-  font-size: 16px;
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Adjust padding as needed */
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    border: 0.25px solid black;
+    border-radius: 1000px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 0px;
 }
 
-/* Responsive Design for Mobile Devices */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 48px; /* Adjusted size for mobile */
-  }
-
-  .header {
-    margin: 20px; /* Adjust margin for smaller screens */
-  }
-
-  .input-section {
-    flex-direction: column; /* Stack items vertically */
-    padding: 10px; /* Adjust padding for smaller screens */
-  }
-
-  .input-section input[type="text"] {
-    width: 90%; /* Responsive width */
-    max-width: none; /* Remove max-width constraint */
-    margin-bottom: 20px; /* Adjust bottom margin */
-  }
-
-  .input-section button[type="submit"] {
-    padding: 8px 16px;
+.input-section button[type="submit"] {
+    background: black;
+    color: white;
+    cursor: pointer;
     font-size: 14px;
-  }
-
-  .text-box {
-    padding: 1em;
-    font-size: 14px; /* Adjust font size for text-boxes */
-    width: 90%; /* Responsive width */
-    max-width: none; /* Remove max-width constraint */
-  }
-
-  .footer {
-    font-size: 14px; /* Adjust footer font size */
-    text-align: center; /* Center text on smaller screens */
-    padding: 10px; /* Adjust padding */
-  }
+    margin-left: 15px;
 }
 
-/* Additional Media Queries for Very Small Devices (e.g., Phones) */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 36px; /* Further reduce font size for very small screens */
-  }
 
-  .input-section input[type="text"] {
-    font-size: 14px; /* Smaller font size for input on small screens */
-  }
 
-  .input-section button[type="submit"] {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
+button[type="enter"] {
+	background: green;
+	color: white;
+	border: none;
+	padding: 5px 5px;
+	top: 50px;
+	font-size: 12px;
+	cursor: pointer;
+	font-family: 'Arial', sans-serif;
+}
 
-  .text-box {
-    padding: 0.5em;
-    font-size: 12px;
-  }
 
-  .footer {
-    font-size: 12px; /* Further adjust footer font size */
-    padding: 5px; /* Reduce padding */
-  }
+/* CSS for the output section */
+
+.output-section {
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.text-box {
+	display: inline-block;
+	background-color: none;
+	border: 0.25px solid black;
+	padding: 50px 50px;
+	margin: 8px;
+	box-sizing: border-box;
+	max-width: 100%;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	word-wrap: break-word;
+	transition: opacity 0.5s ease;
+}
+
+.text-box:hover {
+  opacity: 0.5;`
+}
+
+.delete-button {
+	float: right;
+	background-color: transparent;
+	font-size: 14px;
+	color: red;
+	border: none;
+	padding: 3px;
+	border-radius: 50%;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.delete-button:hover {
+	background-color: #ffffff;
+}
+
+
+.text-box.true {
+	text-decoration: line-through;
+}
+
+
+.footer {
+	padding-top: 30px;
+	font-family: "Syne", sans-serif;
+  color: black;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  position: fixed;
+  bottom: 30px;
+  width: 100%;
 }
